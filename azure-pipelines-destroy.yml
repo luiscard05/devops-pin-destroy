@@ -28,7 +28,8 @@ jobs:
     displayName: Destroy the app from k8s cluster
     inputs:
       script: |
-        kubectl delete -f deployment/
+        kubectl delete deployment pokemon-challenge-deployment
+        kubectl delete service pokemon-challenge
       failOnStderr: true
 
 - job: destroyEKS
